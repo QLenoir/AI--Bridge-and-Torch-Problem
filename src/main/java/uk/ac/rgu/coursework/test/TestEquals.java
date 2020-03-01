@@ -10,6 +10,7 @@ import uk.ac.rgu.coursework.TorchState;
  * @author Quentin
  */
 public class TestEquals {
+    
     public static void main(String[] arg){
 
         Person[] p1 = {new Person("Quentin",5,Bank.EASTERN),new Person("Lison",3,Bank.EASTERN),new Person("Nathan",4,Bank.WESTERN),new Person("Eva",6,Bank.EASTERN),new Person("Elodie",(5),Bank.EASTERN),new Person("Juliette",2,Bank.WESTERN)};
@@ -27,8 +28,8 @@ public class TestEquals {
         System.out.println("State 3:\n"+s3.toString());
         System.out.println("State 4:\n"+s4.toString());
 
-        System.out.println("State 1 equals State 2: "+s1.equals(s2));		//should be true (Arrays have the same values)
-        System.out.println("State 1 equals State 3: "+s1.equals(s3));           //should be false (Torch isn't on the same bank)
-        System.out.println("State 1 equals State 4: "+s1.equals(s4));		//should be false (Arrays have different values)
+        System.out.println("State 1 equals State 2: "+s1.equals(s2));		//Should be true (Arrays have the same values)
+        System.out.println("State 1 equals State 3: "+s1.equals(s3));           //Should be false (Torch isn't on the same bank)
+        System.out.println("State 1 equals State 4: "+s1.equals(s4));		//Should be false (Arrays have different values)
     }
 }

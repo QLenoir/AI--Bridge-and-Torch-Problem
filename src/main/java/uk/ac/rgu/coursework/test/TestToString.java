@@ -1,16 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package uk.ac.rgu.coursework.test;
 
 import uk.ac.rgu.coursework.Bank;
 import uk.ac.rgu.coursework.TorchState;
 import uk.ac.rgu.coursework.Person;
+
 /**
- *
- * @author quent
+ * Test class to verify how a TorchState is displayed as a String
+ * @author Quentin
  */
 public class TestToString {
     public static void main(String[] arg)
@@ -21,6 +17,6 @@ public class TestToString {
     TorchState s = new TorchState(2, persons, Bank.EASTERN);
     
     System.out.println("Initial :\n"+s.toString());
-    } //end method
-} //end class
+    } 
+} 
 
