@@ -172,11 +172,7 @@ public class TorchState implements State {
      */
     public TorchState applyAction(TorchAction action) {
         
-        Person[] newPersons = new Person[persons.length];
-        for(int i = 0; i < persons.length; i++){
-            newPersons[i] = new Person(persons[i].getName(),persons[i].getTime(),persons[i].getBank());
-        }
-        TorchState after = new TorchState(bridgeCapacity, newPersons, torch);
+        TorchState after = this.clone();
         
         for(int i = 0 ; i < persons.length ; i++){
             for (Person j : action.getPersonsToMove()) {
@@ -260,6 +256,18 @@ public class TorchState implements State {
         }
         return costCalculated;
     }
+    
+    /**
+     * Method to clone the current State
+     * @return a clone of this TorchState
+     */
+    public TorchState clone() {
+        Person[] newPersons = new Person[persons.length];
+        for(int i = 0; i < persons.length; i++){
+            newPersons[i] = new Person(persons[i].getName(),persons[i].getTime(),persons[i].getBank());
+        }
+        return new TorchState(this.bridgeCapacity,newPersons,this.torch);
+} //end method
     
     //Getter methods
     public int getBridgeCapacity() {
